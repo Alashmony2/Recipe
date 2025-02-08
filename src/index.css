@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+@plugin "flowbite/plugin";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    font-family: cursive;
+}
+
+.pacifico-regular, h1 {
+    font-family: "Pacifico", cursive !important; 
+}
+
+.active {
+    color: white ;
+    background: #000;
+}
