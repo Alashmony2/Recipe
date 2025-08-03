@@ -50,21 +50,25 @@ export default function MealDetails() {
                     <p>{meal.strInstructions}</p>
                 </div>
 
-                <div className="cart p-5 rounded-3xl h-fit bg-white">
-                    <h3 className="font-semibold text-2xl">Ingredients</h3>
-                    <hr className="mt-2 h-1 bg-gray-300" />
-                    <div className="mt-5">
+                <div className="cart p-6 rounded-3xl h-fit bg-white dark:bg-gray-800 shadow-lg dark:shadow-gray-800/50 transition-colors duration-300">
+                    <h3 className="font-semibold text-2xl text-gray-900 dark:text-white mb-4">Ingredients</h3>
+                    <hr className="h-px bg-gray-200 dark:bg-gray-600 border-0" />
+                    <div className="mt-6 space-y-4">
                         {Array.from({ length: 20 }).map((_, i) => {
                             const ingredient = meal[`strIngredient${i + 1}`];
                             const measure = meal[`strMeasure${i + 1}`];
                             if (ingredient && ingredient.trim()) {
                                 return (
-                                    <div key={i}>
-                                        <div className="flex justify-between">
-                                            <span>{ingredient}: </span>
-                                            <span>{measure}</span>
+                                    <div key={i} className="group">
+                                        <div className="flex justify-between items-center py-2 px-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors duration-200">
+                                            <span className="text-gray-800 dark:text-gray-200 font-medium">{ingredient}</span>
+                                            <span className="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-sm font-medium px-3 py-1 rounded-full">
+                                                {measure}
+                                            </span>
                                         </div>
-                                        <hr className="mt-2 h-[.10rem] bg-gray-300" />
+                                        {i < 19 && meal[`strIngredient${i + 2}`] && (
+                                            <hr className="h-px bg-gray-100 dark:bg-gray-700 border-0 my-1" />
+                                        )}
                                     </div>
                                 );
                             }

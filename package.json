@@ -2,7 +2,7 @@
   "name": "recipe",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://Alashmony2.github.io/Recipe",
+  "homepage": "https://alashmony2.github.io/Recipe",
   "type": "module",
   "scripts": {
     "dev": "vite",
