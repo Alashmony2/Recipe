@@ -26,7 +26,7 @@ export default function Home() {
 
     return <div >
         <Categories />
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2 ">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2 place-items-center">
             {iteam.map((meal) => (
                 <Iteam key={meal.idMeal} meal={meal} />
             ))}

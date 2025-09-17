@@ -25,7 +25,7 @@ export default function CategoryDetails() {
     return (
         <div className="">
             <Categories />
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 place-items-center">
                 {meals.map((meal) => (
                     <div key={meal.idMeal} className="relative max-w-72 mt-20 group transition-transform duration-1000 hover:scale-105 w-full">
                         <div className="rounded-[2rem] overflow-hidden shadow-lg bg-white">
