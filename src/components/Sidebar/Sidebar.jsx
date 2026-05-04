@@ -63,7 +63,7 @@ export default function Sidebar() {
             </li>
             <li>
               <Link 
-                to="/" 
+                to="/areas" 
                 className="dark:text-white dark:hover:bg-gray-700 p-2 pl-6 block w-full border border-gray-300 dark:border-gray-600 rounded-xl hover:scale-105 transition-all"
               >
                 <i className="fa-solid fa-globe-americas mr-2"></i> Areas
