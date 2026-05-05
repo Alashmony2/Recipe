@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import StandAlone from './../../components/LoadingScreen/StandAlone';
+import { Link } from "react-router-dom";
 
 export default function Areas() {
     const [areas, setAreas] = useState([]);
@@ -26,8 +27,8 @@ export default function Areas() {
         </div>
         <div className="pt-5 flex flex-wrap gap-5">
             {areas.map((area) => (
-                <div key={area.strCountry} className="border border-gray-400 px-4 py-2 rounded-3xl text-gray-500 hover:bg-white hover:text-gray-600 hover:shadow-xl transition-all cursor-pointer">
-                    {area.strArea}
+                <div key={area.strCountry} className="border border-gray-400 px-4 py-2 rounded-3xl text-gray-500 hover:bg-white hover:text-gray-600 hover:shadow-xl transition-all cursor-pointer">                   
+                    <Link to={`/areas/${area.strArea}`}> {area.strArea}</Link>
                 </div>
             ))}
         </div>
